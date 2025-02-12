@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup 2FA</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h2>Setup Two-Factor Authentication</h2>
+    <button id="generateQR">Generate QR Code</button>
+
+    <div id="qrContainer">
+        <p>Scan this QR code with Google Authenticator:</p>
+        <img id="qrCode" src="" alt="QR Code">
+        <p>Or enter this secret manually: <span id="secretKey"></span></p>
+    </div>
+
+    <h3>Verify OTP</h3>
+    <form id="verifyForm">
+        <input type="text" id="otp" placeholder="Enter OTP" required>
+        <button type="submit">Verify</button>
+    </form>
+
+    <p id="statusMessage"></p>
+
+    <script src="js/setup-2fa.js"></script>
+</body>
+
+</html>
